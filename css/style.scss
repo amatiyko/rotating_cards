@@ -1,0 +1,176 @@
+//========= Переменные ==========
+$separate-line:  1px solid #EEE;
+
+//========= Transformation ==========
+.card-container {
+    -webkit-perspective: 800px;
+       -moz-perspective: 800px;
+            perspective: 800px;
+    margin-bottom: 30px;
+    
+    &:hover .card {
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    }
+    
+    .card {
+        -webkit-transition: transform 0.5s;
+           -moz-transition: transform 0.5s;
+             -o-transition: transform 0.5s;
+                transition: transform 0.5s;
+        
+        -webkit-transform-style: preserve-3d;
+           -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        position: relative;
+
+        .front, .back {
+            -webkit-backface-visibility: hidden;
+               -moz-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+        }
+        
+        .front {
+            z-index: 2;
+        }
+        
+        .back {
+            z-index: 3;
+            transform: rotateY(180deg);
+        }
+
+    }
+}
+
+//========= STYLE ==========
+body {
+    margin-top: 20px;
+	font-size: 14px;
+    background-color: #E5E9ED;
+    font-family: "Helvetica Nueue", sans-serif;
+}
+
+.title{
+    color: #506A85;
+    text-align: center;
+    font-weight: 300;
+    font-size: 44px;
+    margin-bottom: 30px;
+    line-height: 90%;
+}
+.card-container {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+}
+.card {
+    background-color: #FFF;
+    border-radius: 4px;
+    color: #444444;
+    
+    .front, .back {
+        width: 100%;
+        height: 420px;
+        border-radius: 4px;
+    }
+}
+
+.back-image {
+    height: 105px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    img {
+        width: 100%;
+    }
+}
+
+.person {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -50px auto 0;
+    img {
+        width: 100%;
+        border: 4px solid #FFF;
+        border-radius: 50%;
+    }
+}
+
+.about {
+    padding: 10px 20px 20px;
+    .main {
+        height: 160px;
+        .name {
+            font-size: 22px;
+            margin: 10px 0 0;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .possition {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .footer {
+        border-top: $separate-line;
+        text-align: center;
+        color: #999999;
+        margin: 20px 0 0;
+        padding: 10px 0 0 ;    
+    }
+}
+
+.header{
+    padding: 15px;
+    height: 90px;
+    
+    .quote {
+        text-align: center;
+        border-bottom: $separate-line;
+        font-size: 14px;
+        padding-bottom: 10px;
+        color: #999;
+        font-weight: 400;
+    }
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.social-links-container {
+    width: 100%;
+    margin-bottom: 100px;
+
+    .social-link{
+        width: 33.33333%;
+        float:left;
+        text-align: center;
+        
+        &:first-child {
+            border-right: $separate-line;
+        }
+        
+        &:last-child {
+            border-left: $separate-line;
+        }
+    }
+}
+.back {
+    .footer {
+        text-align: left;
+    }
+}
+
+.technologies {
+    margin-bottom: 50px;
+    div {
+        text-align: center;
+    }
+}

@@ -1,0 +1,132 @@
+.card-container {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  margin-bottom: 30px; }
+  .card-container:hover .card {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  .card-container .card {
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative; }
+    .card-container .card .front, .card-container .card .back {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #FFF; }
+    .card-container .card .front {
+      z-index: 2; }
+    .card-container .card .back {
+      z-index: 3;
+      transform: rotateY(180deg); }
+
+body {
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: #E5E9ED;
+  font-family: "Helvetica Nueue", sans-serif; }
+
+.title {
+  color: #506A85;
+  text-align: center;
+  font-weight: 300;
+  font-size: 44px;
+  margin-bottom: 30px;
+  line-height: 90%; }
+
+.card-container {
+  width: 100%;
+  height: 420px;
+  border-radius: 4px; }
+
+.card {
+  background-color: #FFF;
+  border-radius: 4px;
+  color: #444444; }
+  .card .front, .card .back {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px; }
+
+.back-image {
+  height: 105px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0; }
+  .back-image img {
+    width: 100%; }
+
+.person {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: -50px auto 0; }
+  .person img {
+    width: 100%;
+    border: 4px solid #FFF;
+    border-radius: 50%; }
+
+.about {
+  padding: 10px 20px 20px; }
+  .about .main {
+    height: 160px; }
+    .about .main .name {
+      font-size: 22px;
+      margin: 10px 0 0;
+      text-transform: capitalize;
+      text-align: center; }
+    .about .main .possition {
+      text-align: center;
+      margin-bottom: 20px; }
+  .about .footer {
+    border-top: 1px solid #EEE;
+    text-align: center;
+    color: #999999;
+    margin: 20px 0 0;
+    padding: 10px 0 0; }
+
+.header {
+  padding: 15px;
+  height: 90px; }
+  .header .quote {
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: #999;
+    font-weight: 400; }
+
+.skills {
+  margin-top: 20px; }
+
+.social-links-container {
+  width: 100%;
+  margin-bottom: 100px; }
+  .social-links-container .social-link {
+    width: 33.33333%;
+    float: left;
+    text-align: center; }
+    .social-links-container .social-link:first-child {
+      border-right: 1px solid #EEE; }
+    .social-links-container .social-link:last-child {
+      border-left: 1px solid #EEE; }
+
+.back .footer {
+  text-align: left; }
+
+.technologies {
+  margin-bottom: 50px; }
+  .technologies div {
+    text-align: center; }
+
+/*# sourceMappingURL=style.style.map */
